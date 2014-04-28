@@ -28,6 +28,6 @@ test:
   adapter: postgresql
   encoding: unicode
   host: localhost
-  database: rails-4-test<%= ENV['TEST_ENV_NUMBER'] %>
+  database: rails-4-test
   username: username
   password:

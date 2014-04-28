@@ -9,4 +9,8 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-RailsStarterApp::Application.config.secret_key_base = 'b9e0a80d0a845425dd8aa5b19c0b18f49c74ace1d7b164a44d2185aa4b4164104a410c8ea3e80f5d804d6b4bdb9a90a4add1bbdf3d5003c43fdebf7f170f5d13'
+RailsStarterApp::Application.config.secret_key_base = if Rails.env.development? || Rails.env.test?
+  ('x' * 30)
+else
+  ENV['SECRET_TOKEN']
+end

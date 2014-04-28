@@ -14,8 +14,8 @@
 /log
 /tmp
 
-# ignoring the environment variable initialization file
-/config/initializers/_environment_variables.rb
+# ignoring the environment variable file
+.env
 
 # Ignore the database.yml file
 /config/database.yml

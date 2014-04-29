@@ -5,7 +5,7 @@ html, body {
 body {
   font-family: 'open sans';
   -webkit-font-smoothing: antialiased;
-  padding-top: 70px;
+  // padding-top: 70px;
 
   @include breakpoint($mobile) {
     padding-top: 0px;

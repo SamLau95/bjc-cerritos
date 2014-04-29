@@ -11,7 +11,7 @@ html
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-    title = content_for?(:title) ? yield(:title) : "Rails 4 Starter App"
+    title = content_for?(:title) ? yield(:title) : 'BJC Cerritos'
     = analytics_init if Rails.env.production?
     link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
@@ -19,6 +19,6 @@ html
     = csrf_meta_tags
 
   body
-    = render partial: "layouts/header"
+    / = render partial: "layouts/header"
     = yield
 

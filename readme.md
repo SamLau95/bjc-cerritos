@@ -16,13 +16,15 @@ where `NewAppName` is the name of your custom application.
 
 First, make a file for your environment variables:
 
-    touch config/initializers/_environment_variables.rb
+    cp .env.sample .env
 
-We're using Devise so you should set `Devise.secret_key` in the `environment_variables.rb` file.
+We're using Devise so you should set `DEVISE_SECRET_KEY` in `.env`
 
-Copy over the `database.yml` file from `config/sample/database.yml` to `config/database.yml`:
+Copy over the `database.yml` file from `config/database.yml.sample` to `config/database.yml`:
 
-    cp config/sample/database.yml config/database.yml
+    cp config/database.yml.sample config/database.yml
+    
+Then fill in `config/database.yml` with your postgres username and password.
 
 Create the database using:
 
@@ -40,16 +42,16 @@ For faster development, you might want to add yourself to the `db/seeds/developm
 
 Start the server:
 
-    rails s
+    foreman start -f Procfile.dev
 
 Happy developing!
 
 ## Heroku Deployment
 
-There's a file, `/config/initializers/_environment_variables.rb`, which contains environment variables (mostly keys) that are not safe to upload to GitHub (added to .gitignore) so if you create this file, you can set your environment variables here easily.
+There's a file, `.env`, which contains environment variables (mostly keys) that are not safe to upload to GitHub (added to .gitignore) so if you create this file, you can set your environment variables here easily.
 For example:
 
-    ENV['SECRET_KEY'] = 'secret-password'
+    SECRET_KEY=secret-password
 
 Since we use Git to deploy to Heroku, this file won't be included, so you'll have to set the environment variables manually, and this can be done just once. The equivalent of the above on Heroku is:
 

@@ -1,58 +1,9 @@
-# Rails 4 Starter App
+# [BJC Cerritos](http://bjc.herokuapp.com/)
 
-## Using the Starter App
+![logo](http://bjc.berkeley.edu/bjc200.png "BJC Logo")
 
-Copy all of the files into a new directory (unless you want the commit history of this app, in that case, copy over everything including the .git directory). Once you have copied over the files, install the gems by running:
+The Beauty and Joy of Computing is one of the most popular courses in the computer science curriculum at UC Berkeley. [Critically acclaimed on campus](http://goo.gl/cAjnvF), the class aims to provide a fast-paced and accessible intro to the big ideas of computing.
 
-    bundle install
+This summer, Jina Yoon and I are bringing this course from Berkeley to Cerritos! We’ve been planning this for a whole  semester and we’re super excited to teach about a subject that, despite greatly affecting our daily lives, is largely understated in our schools' curriculum today.
 
-Then, rename the application using [rails-rename](https://github.com/negativetwelve/rails-rename) by running the command:
-
-    rails g rename NewAppName
-
-where `NewAppName` is the name of your custom application.
-
-## Setup
-
-First, make a file for your environment variables:
-
-    cp .env.sample .env
-
-We're using Devise so you should set `DEVISE_SECRET_KEY` in `.env`
-
-Copy over the `database.yml` file from `config/database.yml.sample` to `config/database.yml`:
-
-    cp config/database.yml.sample config/database.yml
-    
-Then fill in `config/database.yml` with your postgres username and password.
-
-Create the database using:
-
-    rake db:create
-
-Migrate the database:
-
-    rake db:migrate
-
-To seed the database, we have a rake task that loads users specifically for development purposes only.
-
-    rake db:seed:development
-
-For faster development, you might want to add yourself to the `db/seeds/development.rb` file.
-
-Start the server:
-
-    foreman start -f Procfile.dev
-
-Happy developing!
-
-## Heroku Deployment
-
-There's a file, `.env`, which contains environment variables (mostly keys) that are not safe to upload to GitHub (added to .gitignore) so if you create this file, you can set your environment variables here easily.
-For example:
-
-    SECRET_KEY=secret-password
-
-Since we use Git to deploy to Heroku, this file won't be included, so you'll have to set the environment variables manually, and this can be done just once. The equivalent of the above on Heroku is:
-
-    heroku config:set SECRET_KEY=secret-password
+Projects range from a word-guessing game to creating an evil AI for hangman. The course culminates in an open-ended design project where you and a team will apply your skills to the real world!

@@ -11,6 +11,14 @@ html
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
+    meta property="og:url" content="http://www.bjccerritos.com"
+    meta property="og:title" content="The Beauty and Joy of Computing, Cerritos"
+    meta property="og:type" content="website"
+    meta property="og:description" content="The Beauty and Joy of Computing\
+      is one of the world's most acclaimed computer science classes. This\
+      summer, it is coming to Cerritos, California!"
+    meta property="og:image" content="website"
+
     title = content_for?(:title) ? yield(:title) : 'BJC Cerritos'
     = favicon_link_tag 'favicon.ico'
     = analytics_init if Rails.env.production?

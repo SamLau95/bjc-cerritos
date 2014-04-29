@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RailsStarterApp::Application.load_tasks
+Bjc::Application.load_tasks

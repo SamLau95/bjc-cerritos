@@ -77,4 +77,7 @@ Bjc::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # GA
+  GA.tracker = "UA-42949369-3"
 end

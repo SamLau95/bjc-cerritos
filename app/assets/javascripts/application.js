@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function() {
+  $("#typer").typed({
+    strings: ["to code.", "the importance of computing.",
+      "the great ideas of computer science."],
+    typeSpeed: 50,
+    backDelay: 500
+  });
+});

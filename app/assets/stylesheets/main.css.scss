@@ -148,10 +148,10 @@ h1, h2, h3, h4, h5 {
     .try-project-container {
       text-align: center;
       padding: 100px 0;
-      a:hover {
-        background-color: #6A8083;
+      a {
         color: white;
         text-decoration: none;
+        &:hover { background-color: #6A8083; }
       }
     }
   }

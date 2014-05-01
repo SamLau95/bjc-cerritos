@@ -12,9 +12,8 @@ body {
   }
 }
 
-.center {
-  text-align: center;
-}
+.center { text-align: center; }
+.right { text-align: right; }
 
 .white {
   color: white;
@@ -78,6 +77,19 @@ h1, h2, h3, h4, h5 {
 
     .attention-grabber {
       padding: 100px 0;
+    }
+  }
+
+  section#details {
+    background-color: $details-bg;
+
+    .details {
+      padding: 100px 0;
+      .row { margin-bottom: 40px; }
+      h3 {
+        text-align: left;
+        line-height: 1.4em;
+      }
     }
   }
 

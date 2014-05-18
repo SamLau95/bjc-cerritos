@@ -19,6 +19,7 @@ gem 'simple_form', '~> 3.0.1'
 gem 'cancancan', '~> 1.7.1'
 gem 'ffaker', '~> 1.22.1'
 gem 'newrelic_rpm'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :development do
   gem 'better_errors', '~> 1.1.0'

@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   def home
   end
 
-  def about
+  def sign_up
   end
 end

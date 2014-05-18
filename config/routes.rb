@@ -1,5 +1,5 @@
 Bjc::Application.routes.draw do
   root to: "pages#home"
 
-  match "about", to: "pages#about", via: :get
+  get '/sign_up', to: 'pages#sign_up', as: :sign_up
 end

@@ -21,6 +21,13 @@ body {
 
 .underline { text-decoration: underline; }
 
+a.flat-button, .email-link {
+  color: white;
+  text-decoration: none;
+  transition: background-color .3s ease;
+  &:hover { background-color: #566C6F; }
+}
+
 .dark-link {
   color: rgba(0,0,0,0.85);
   text-decoration: none;
@@ -70,7 +77,7 @@ h1, h2, h3, h4, h5 {
     background-color: $intro-bg;
 
     .about-intro {
-      padding: 100px 0;
+      padding: 100px 0 50px 0;
     }
   }
 
@@ -161,12 +168,30 @@ h1, h2, h3, h4, h5 {
 
     .try-project-container {
       text-align: center;
-      padding: 100px 0;
+      padding: 100px 0 150px;
       a {
         color: white;
         text-decoration: none;
         &:hover { background-color: #6A8083; }
       }
     }
+  }
+}
+
+footer {
+  position: fixed;
+  height: 80px;
+  background-color: $bottom-section-bg;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  text-align: center;
+  display: none;
+
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover { background-color: #6A8083; }
   }
 }

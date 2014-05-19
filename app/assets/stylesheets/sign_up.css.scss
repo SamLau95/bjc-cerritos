@@ -1,0 +1,50 @@
+#signup {
+  background-color: $midnight-blue;
+  color: $white;
+
+  section#heading {
+    padding: 100px 0 50px;
+  }
+
+  section#description {
+    padding-bottom: 50px;
+  }
+
+  section#points #points-wrapper {
+    background-color: $pacific;
+    padding: 20px;
+    li {
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+
+  section#signup-form {
+    padding: 100px 0 50px;
+    .row {
+      padding-bottom: 20px;
+    }
+    #new_signup {
+      input, textarea {
+        color: #000;
+      }
+      textarea { height: 200px; width: 400px; }
+      span {
+        margin: 0 10px 0 0;
+        display: block;
+      }
+      .btn { color: $white; }
+    }
+  }
+
+  section#payment-button {
+    margin: 30px 0 50px;
+    display: none;
+  }
+}
+
+#success {
+  #main {
+    padding: 200px 0;
+  }
+}

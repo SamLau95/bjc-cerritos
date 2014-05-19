@@ -3,6 +3,11 @@ class PagesController < ApplicationController
   def home
   end
 
-  def sign_up
+  def signup
+    @signup = Signup.new
+    @spots_left = Charge.spots_left
+  end
+
+  def success
   end
 end

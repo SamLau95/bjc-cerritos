@@ -1,0 +1,43 @@
+#signup
+  .container
+    section#heading
+      .row
+        .col-md-8.col-md-offset-2
+          h1 Sign up!
+
+    section#description
+      .row
+        .col-md-8.col-md-offset-2
+          h3 You are just a few clicks away from being a part of the first-ever Beauty and Joy of Computing class in Cerritos!
+          - if @spots_left > 0 && @spots_left < 10
+            h3 There #{@spots_left == 1 ? 'is' : 'are'} only #{pluralize @spots_left, 'spot'} left, so sign up now!
+
+    section#points
+      .row
+        .col-md-8.col-md-offset-2
+          #points-wrapper
+            ol#info-list
+              h3 Before you sign up, there are a few things you should know.
+              br
+              li
+                | You must be available for the whole duration of the course:
+                br 9am-11am, Monday through Thursday, June 23 to July 24.
+              li You must be able to bring your own laptop to class.
+              li The price of the class is $300, non-refundable barring exceptional circumstances.
+              li There are 10 spots in the class, which will be taken on a first-come, first-serve basis. Once the class is full, signups will close.
+              li
+                | If you have any questions at all, please send Sam an email!
+                br samlau95 [at] berkeley.edu
+
+    section#signup-form
+      - if @spots_left > 0
+        = render 'form', signup: @signup
+      - else
+        / TODO: Make waitlist form
+        h2 Sorry, there are currently no spots left.
+
+    section#payment-button
+      .row
+        .col-md-8.col-md-offset-2
+          = form_tag charge_path
+            script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_qHYUo9FdG3q4acuvIDAUccNw" data-amount="30000" data-name="BJC Cerritos" data-description="Tuition" data-image="images/bjc160.png"

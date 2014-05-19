@@ -1,5 +1,10 @@
 Bjc::Application.routes.draw do
-  root to: "pages#home"
+  devise_for :admins
+  root to: 'pages#home'
 
-  get '/sign_up', to: 'pages#sign_up', as: :sign_up
+  get '/signup', to: 'pages#signup', as: :signup
+  get '/success', to: 'pages#success', as: :success
+
+  resources :signups, only: :create
+  post 'charge', to: 'signups#charge', as: :charge
 end

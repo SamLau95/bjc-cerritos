@@ -42,4 +42,4 @@
       .row
         .col-md-8.col-md-offset-2
           = form_tag charge_path
-            script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_qHYUo9FdG3q4acuvIDAUccNw" data-amount="30000" data-name="BJC Cerritos" data-description="Tuition" data-image="images/bjc160.png"
+            script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-amount="30000" data-name="BJC Cerritos" data-description="Tuition" data-image="images/bjc160.png"

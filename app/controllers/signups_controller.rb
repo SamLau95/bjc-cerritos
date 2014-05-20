@@ -23,6 +23,7 @@ class SignupsController < ApplicationController
     redirect_to success_path
   rescue Stripe::CardError => e
     flash[:error] = e.message
+    puts "CardError! #{e.message}"
     redirect_to signup_path
   end
 

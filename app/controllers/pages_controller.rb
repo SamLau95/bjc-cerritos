@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def signup
-    redirect_to https_url unless using_https?
+    redirect_to https_url if should_use_https?
     @signup = Signup.new
     @spots_left = Charge.spots_left
   end
@@ -18,7 +18,7 @@ class PagesController < ApplicationController
     'https://bjc.herokuapp.com/signup'
   end
 
-  def using_https?
-    Rails.env.production? && request.original_url == https_url
+  def should_use_https?
+    Rails.env.production? && request.original_url != https_url
   end
 end

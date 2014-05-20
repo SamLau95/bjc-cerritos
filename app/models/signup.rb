@@ -16,6 +16,6 @@
 
 # Signups for class
 class Signup < ActiveRecord::Base
-  validates :first_name, :last_name, :email, :phone, :gender, :grade,
-            :why_take, presence: true
+  # validates :first_name, :last_name, :email, :phone, :gender, :grade,
+  #           :why_take, presence: true
 end

@@ -1,3 +1,6 @@
-$('#signup-form').html('<div class="row"><div class="col-md-8 col-md-offset-2"><h2>Thanks for signing up!</h2></div></div>');
-$('#signup')[0].style.height = '100vh';
+$('#signup-form').html("<%= escape_javascript render 'proceeding' %>");
+// $('#signup')[0].style.height = '100vh';
 $('button.stripe-button-el').click();
+$('#payment-dialog').click(function () {
+  $('button.stripe-button-el').click()
+});

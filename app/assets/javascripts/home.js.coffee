@@ -13,6 +13,9 @@ ready = ->
       else
         $('footer').slideDown()
 
+  $('#payment-dialog').click ->
+    $('button.stripe-button-el').click()
+
 
 $(document).ready ready
 $(document).on 'page:load', ready

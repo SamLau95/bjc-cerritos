@@ -12,19 +12,21 @@
           - if @spots_left > 0 && @spots_left < 10
             h3 There #{@spots_left == 1 ? 'is' : 'are'} only #{pluralize @spots_left, 'spot'} left, so sign up now!
 
+    = render 'mailchimp_form'
+
     section#points
       .row
         .col-md-8.col-md-offset-2
           #points-wrapper
+            h3 Before you sign up, there are a few things you should know.
             ol#info-list
-              h3 Before you sign up, there are a few things you should know.
               br
               li
                 | You must be available for the whole duration of the course:
                 br 1pm-3pm, Monday through Thursday, June 23 to July 24.
                 b Update: The time is no longer 9am-11am.
               li You must be able to bring your own laptop to class.
-              li The price of the class is $300, non-refundable barring exceptional circumstances.
+              li The price of the class is $300, non-refundable barring exceptional circumstances. Scholarships are available for those demonstrating financial need (contact Sam for more info)
               li There are 10 spots in the class, which will be taken on a first-come, first-serve basis. Once the class is full, signups will close.
               li
                 | If you have any questions at all, please send Sam an email!

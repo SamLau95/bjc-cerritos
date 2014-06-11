@@ -12,7 +12,10 @@
           - if @spots_left > 0 && @spots_left < 10
             h3 There #{@spots_left == 1 ? 'is' : 'are'} only #{pluralize @spots_left, 'spot'} left, so sign up now!
 
-    = render 'mailchimp_form'
+    section#mcform
+      .row
+        .col-md-8.col-md-offset-2
+          = render 'mailchimp_form'
 
     section#points
       .row

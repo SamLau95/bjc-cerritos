@@ -1,5 +1,7 @@
 # Controller for static pages
 class PagesController < ApplicationController
+  before_filter :set_alert_flag
+
   def home
   end
 
@@ -20,5 +22,12 @@ class PagesController < ApplicationController
 
   def should_use_https?
     Rails.env.production? && request.original_url != https_url
+  end
+
+  def set_alert_flag
+    unless session[:alerted]
+      @alert_flag = true
+      session[:alerted] = true
+    end
   end
 end

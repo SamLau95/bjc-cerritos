@@ -1,6 +1,6 @@
 # Controller for static pages
 class PagesController < ApplicationController
-  before_filter :set_alert_flag
+  before_filter :set_alert_flag, only: [:home]
 
   def home
   end

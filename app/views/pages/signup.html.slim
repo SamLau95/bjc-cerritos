@@ -2,8 +2,10 @@
   .container
     section#heading
       .row
-        .col-md-8.col-md-offset-2
+        .col-md-6.col-md-offset-2.col-xs-8
           h1 Sign up!
+        .col-md-2.col-xs-4
+          = link_to 'Back', root_path, class: 'pull-right btn-back'
 
     section#description
       .row
@@ -42,7 +44,6 @@
       - if @spots_left > 0
         = render 'form', signup: @signup
       - else
-        / TODO: Make waitlist form
         .row
           .col-md-8.col-md-offset-2
             h2 Sorry, there are currently no spots left. Email Sam and sign up for our mailing list for possible openings!

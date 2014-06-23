@@ -11,8 +11,8 @@
       .row
         .col-md-8.col-md-offset-2
           h3 You are just a few clicks away from being a part of the first-ever Beauty and Joy of Computing class in Cerritos!
-          - if @spots_left > 0 && @spots_left < 10
-            h3 There #{@spots_left == 1 ? 'is' : 'are'} only #{pluralize @spots_left, 'spot'} left, so sign up now!
+          / - if @spots_left > 0 && @spots_left < 10
+          /   h3 There #{@spots_left == 1 ? 'is' : 'are'} only #{pluralize @spots_left, 'spot'} left, so sign up now!
 
     section#mcform
       .row
@@ -42,7 +42,10 @@
 
     section#signup-form
       - if @spots_left > 0
-        = render 'form', signup: @signup
+        / = render 'form', signup: @signup
+        .row
+          .col-md-8.col-md-offset-2
+            h2 Signups are now closed. If you still want to join the class, please contact Sam!
       - else
         .row
           .col-md-8.col-md-offset-2
